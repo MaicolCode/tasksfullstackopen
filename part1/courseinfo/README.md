@@ -70,3 +70,21 @@ El progreso cuidadoso y en pequeños pasos puede parecer lento, pero en realidad
 _"La única manera de ir rápido, es hacerlo bien"_
 
 es decir, según Martin, avanzar con cuidado y con pequeños pasos es incluso la única manera de ser rápido.
+
+# 1.2: Información del Curso, paso 2
+
+Refactoriza el componente Content para que no muestre ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes Part de los cuales cada uno representa el nombre y el número de ejercicios de una parte.
+
+```jsx
+const Content = ... {
+  return (
+    <div>
+      <Part .../>
+      <Part .../>
+      <Part .../>
+    </div>
+  )
+}
+```
+
+Nuestra aplicación pasa información de una manera bastante primitiva en este momento, ya que se basa en variables individuales. Esta situación mejorará pronto en la parte 2, pero antes de eso, vamos a la parte 1b para aprender acerca de JavaScript.
