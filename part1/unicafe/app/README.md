@@ -68,3 +68,9 @@ const App = () => {
   )
 }
 ```
+
+# 1.9: unicafe paso 4
+
+Cambia tu aplicación para mostrar estadísticas solo una vez que se hayan recopilado los comentarios.
+
+<image src='https://fullstackopen.com/static/b453d7533ae85dcaf3eccf342a353c58/5a190/15e.png' alt='Screenshot proyecto modificado visual estadisticas'/>
