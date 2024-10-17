@@ -98,3 +98,18 @@ const Statistics = (props) => {
 ```
 
 El estado de la aplicación aún debe mantenerse en el componente raíz App.
+
+# 1.11\*: unicafe, paso 6
+
+Muestra las estadísticas en una tabla HTML, de modo que tu aplicación se vea más o menos así:
+
+<image src='https://fullstackopen.com/static/a74acccc17aafb02b3801ffa1fcc0fdc/5a190/16e.png' alt='Screenshot proyecto final con actualizaciones implementadas'/>
+Recuerda mantener la consola abierta en todo momento. Si ves esta advertencia en tu consola:
+
+<image src='https://fullstackopen.com/static/d6f948307449c2673f28f1077ef4d789/5a190/17a.png' alt='Screenshot advertencia de consola'/>
+
+Entonces realiza las acciones necesarias para que la advertencia desaparezca. Intenta buscar en Google el mensaje de error si te quedas atascado.
+
+Una fuente típica de un error **_ Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist. _** es la extensión de Chrome. Intenta ir a chrome://extensions y deshabilitarlas una por una y luego actualizar la página de la aplicación React; el error debería desaparecer eventualmente.
+
+¡Asegúrate de que a partir de ahora no veas ninguna advertencia en tu consola!
