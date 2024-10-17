@@ -4,7 +4,7 @@ Como la mayoría de las empresas, Unicafe recopila comentarios de sus clientes. 
 
 La aplicación debe mostrar el número total de comentarios recopilados para cada categoría. Tu aplicación final podría verse así:
 
-![]('https://fullstackopen.com/static/d4fe767d6d8eb46f1dd21334f5f9e46e/5a190/13e.png'){width=680px}
+![]('https://fullstackopen.com/static/d4fe767d6d8eb46f1dd21334f5f9e46e/5a190/13e.png'){width='680px'}
 
 Ten en cuenta que tu aplicación debe funcionar solo durante una única sesión del navegador. Una vez que se actualice la página, los comentarios recopilados pueden desaparecer.
 
