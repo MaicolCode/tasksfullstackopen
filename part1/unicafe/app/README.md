@@ -74,3 +74,27 @@ const App = () => {
 Cambia tu aplicación para mostrar estadísticas solo una vez que se hayan recopilado los comentarios.
 
 <image src='https://fullstackopen.com/static/b453d7533ae85dcaf3eccf342a353c58/5a190/15e.png' alt='Screenshot proyecto modificado visual estadisticas'/>
+
+# 1.10: unicafe paso 5
+
+Continuemos refactorizando la aplicación. Extrae los siguiente dos componentes:
+
+Button para definir los botones utilizados para enviar comentarios
+StatisticLine para mostrar una única estadística, por ejemplo, la puntuación media.
+Para ser claros: el componente StatisticLine siempre muestra una única estadística, lo que significa que la aplicación utiliza varios componentes para representar todas las estadísticas:
+
+```jsx
+const Statistics = (props) => {
+  /// ...
+  return(
+    <div>
+      <StatisticLine text="good" value ={...} />
+      <StatisticLine text="neutral" value ={...} />
+      <StatisticLine text="bad" value ={...} />
+      // ...
+    </div>
+  )
+}
+```
+
+El estado de la aplicación aún debe mantenerse en el componente raíz App.
