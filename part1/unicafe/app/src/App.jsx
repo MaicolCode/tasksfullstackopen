@@ -35,7 +35,7 @@ function App() {
             bad={bad}
           />
         ) : (
-          <span className='no-reactions'>No reactions yet...</span>
+          <span>No reactions yet...</span>
         )}
       </section>
     </div>
@@ -53,21 +53,24 @@ function Statistics({ totalReactions, good, neutral, bad }) {
   const promedio = ((good / totalReactions) * 100).toFixed(5)
 
   return (
-    <>
+    <table>
       <StatisticLine title='Good' value={good} />
       <StatisticLine title='Neutral' value={neutral} />
       <StatisticLine title='Bad' value={bad} />
       <StatisticLine title='Total' value={totalReactions} />
       <StatisticLine title='Average' value={average} />
       <StatisticLine title='Positive' value={`${promedio} %`} />
-    </>
+    </table>
   )
 }
 
 function StatisticLine({ title, value }) {
   return (
-    <span>
-      {title}: {value}
-    </span>
+    <tbody>
+      <tr>
+        <td style={{ width: '100px' }}>{title}</td>
+        <td style={{ width: 'auto' }}>{value}</td>
+      </tr>
+    </tbody>
   )
 }
