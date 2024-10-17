@@ -6,8 +6,6 @@ function App() {
   const [bad, setBad] = useState(0)
 
   const totalReactions = good + neutral + bad
-  const average = ((good - bad) / totalReactions).toFixed(5)
-  const promedio = ((good / totalReactions) * 100).toFixed(5)
 
   const handleGood = () => {
     setGood(good + 1)
@@ -29,12 +27,16 @@ function App() {
       </div>
       <h1>Statistics</h1>
       <section className='statistics'>
-        <span>Good: {good}</span>
-        <span>Neutral: {neutral}</span>
-        <span>Bad: {bad}</span>
-        <span>All: {totalReactions}</span>
-        <span>Average: {average}</span>
-        <span>Positive: {promedio} %</span>
+        {totalReactions > 0 ? (
+          <Statistics
+            totalReactions={totalReactions}
+            good={good}
+            neutral={neutral}
+            bad={bad}
+          />
+        ) : (
+          <span className='no-reactions'>No reactions yet...</span>
+        )}
       </section>
     </div>
   )
@@ -44,4 +46,20 @@ export default App
 
 function Button({ text, actionClick }) {
   return <button onClick={actionClick}>{text}</button>
+}
+
+function Statistics({ totalReactions, good, neutral, bad }) {
+  const average = ((good - bad) / totalReactions).toFixed(5)
+  const promedio = ((good / totalReactions) * 100).toFixed(5)
+
+  return (
+    <>
+      <span>Good: {good}</span>
+      <span>Neutral: {neutral}</span>
+      <span>Bad: {bad}</span>
+      <span>All: {totalReactions}</span>
+      <span>Average: {average}</span>
+      <span>Positive: {promedio} %</span>
+    </>
+  )
 }
