@@ -54,12 +54,20 @@ function Statistics({ totalReactions, good, neutral, bad }) {
 
   return (
     <>
-      <span>Good: {good}</span>
-      <span>Neutral: {neutral}</span>
-      <span>Bad: {bad}</span>
-      <span>All: {totalReactions}</span>
-      <span>Average: {average}</span>
-      <span>Positive: {promedio} %</span>
+      <StatisticLine title='Good' value={good} />
+      <StatisticLine title='Neutral' value={neutral} />
+      <StatisticLine title='Bad' value={bad} />
+      <StatisticLine title='Total' value={totalReactions} />
+      <StatisticLine title='Average' value={average} />
+      <StatisticLine title='Positive' value={`${promedio} %`} />
     </>
+  )
+}
+
+function StatisticLine({ title, value }) {
+  return (
+    <span>
+      {title}: {value}
+    </span>
   )
 }
