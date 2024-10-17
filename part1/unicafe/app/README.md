@@ -40,3 +40,31 @@ export default App
 Amplía tu aplicación para que muestre más estadísticas sobre los comentarios recopilados: el número total de comentarios recopilados, la puntuación promedio (buena: 1, neutral: 0, mala: -1) y el porcentaje de comentarios positivos.
 
 <image src='https://fullstackopen.com/static/0a5d15ae9f055a15cb469b9c9223df41/5a190/14e.png' alt='Screenshot proyecto modificado'/>
+
+# 1.8: unicafe, paso 3
+
+Refactoriza tu aplicación para que la visualización de las estadísticas se extraiga en su propio componente Statistics. El estado de la aplicación debe permanecer en el componente raíz App.
+
+Recuerda que los componentes no deben definirse dentro de otros componentes:
+
+```jsx
+// un lugar adecuado para definir un componente
+const Statistics = (props) => {
+  // ...
+}
+
+const App = () => {
+  const [good, setGood] = useState(0)
+  const [neutral, setNeutral] = useState(0)
+  const [bad, setBad] = useState(0)
+
+  // no definas componentes adentro de otro componente
+  const Statistics = (props) => {
+    // ...
+  }
+
+  return (
+    // ...
+  )
+}
+```
