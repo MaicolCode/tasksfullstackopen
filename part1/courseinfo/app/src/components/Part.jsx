@@ -1,4 +1,4 @@
-export function Part({ part, exercises }) {
+export default function Part({ part, exercises }) {
   return (
     <p>
       {part} {exercises}

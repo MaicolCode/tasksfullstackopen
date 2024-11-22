@@ -1,6 +1,6 @@
-import { Part } from './Part'
+import Part from './Part'
 
-export function Content({ parts }) {
+export default function Content({ parts }) {
   return (
     <div>
       {parts.map((part, index) => (
