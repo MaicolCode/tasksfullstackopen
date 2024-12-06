@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function duplicatePerson(person, persons) {
   return persons.findIndex((p) => p.name === person)
@@ -13,6 +14,13 @@ const App = () => {
   ])
 
   const [search, setSearch] = useState(persons)
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/persons').then((response) => {
+      console.log('Promised Fulfilled')
+      setPersons(response.data)
+    })
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
